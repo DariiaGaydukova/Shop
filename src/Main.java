@@ -10,7 +10,7 @@ public class Main {
 
         while (true) {
 
-            System.out.println("Выберите операцию:\n 1.добавить\n 2.показать\n 3.удалить\n 4.найти");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n 1.пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n 2.пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n 3.пїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n 4.пїЅпїЅпїЅпїЅпїЅ");
             String input = scanner.nextLine();
             int operation = Integer.parseInt(input);
             int productCount = 0;
@@ -18,24 +18,24 @@ public class Main {
             switch (operation) {
 
                 case 1:
-                    System.out.println("Какую покупку вы хотите добавить?");
+                    System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ?");
                     String product = scanner.nextLine();
                     productList.add(product);
                     productCount++;
-                    System.out.println("Итого в корзине: " + productCount + " покупок");
+                    System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + productCount + " пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
                     break;
 
                 case 3:
-                    System.out.println("Какую покупку вы хотите удалить? (ведите номер или название)");
+                    System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ? (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)");
                     String deleteProduct = scanner.nextLine();
 
                     try {
                         int delete = Integer.parseInt(deleteProduct);
                         productList.remove(delete);
-                        System.out.println("Покупка " + deleteProduct + " удалена, список покупок:");
+                        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ " + deleteProduct + " пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:");
                     } catch (NumberFormatException e) {
                         productList.remove(deleteProduct);
-                        System.out.println("Покупка " + deleteProduct + " удалена, список покупок:");
+                        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ " + deleteProduct + " пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:");
                     }
 
 
@@ -50,7 +50,7 @@ public class Main {
 
 
                 case 4:
-                    System.out.println("Введите текст для поиска");
+                    System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
                     String query = scanner.nextLine();
                     String queryLower = query.toLowerCase();
                     for (int i = 0; i < productList.size(); i++) {
@@ -59,13 +59,8 @@ public class Main {
                         if (itemLower.contains(queryLower)) {
                             System.out.println(i + 1 + "." + productList.get(i) + "\n");
                         }
-
                     }
-
             }
-
         }
-
-
     }
 }
